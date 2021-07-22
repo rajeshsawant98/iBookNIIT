@@ -44,6 +44,9 @@
       <li class="nav-item">
         <a class="nav-link" href="${pageContext.request.contextPath}/contactus">Contact Us</a>
       </li>
+       <li class="nav-item">
+        <a class="nav-link" href="${pageContext.request.contextPath}/book/add">Add Books</a>
+      </li>
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           Books
