@@ -15,7 +15,7 @@
 		<c:forEach items="${books}" var="book">
 		<div class="col-lg-3 col-xl-2 col-md-6 col-sm-12 text-center">
 		<a href="${pageContext.request.contextPath}/book/bookid/${book.prodId}">
-			<img src="https://static.toiimg.com/imagenext/toiblogs/photo/blogs/wp-content/uploads/2016/08/Harry-Potter-and-the-Cursed-Child.jpg" class="col-lg-10"/></a>
+			<img src="${book.imglink}" class="col-lg-10"/></a>
 		<h2>${book.prodName}</h2>
 		<p>Rs.${book.prodPrice}</p>
 		</div>

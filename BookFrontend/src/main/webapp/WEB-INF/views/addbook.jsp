@@ -19,20 +19,29 @@
 					<label>Enter Product Name</label>
 					<sp:input path="prodName" placeholder="Enter Product Name"
 						class="form-control" />
+						<sp:errors path="prodName" class="text-danger"/>
 				</div>
 				<div class="form-group">
 					<label>Enter Product Price</label>
 					<sp:input path="prodPrice" placeholder="Enter Price"
 						class="form-control" />
+				<sp:errors path="prodPrice" class="text-danger"/>
 				</div>
 				<div class="form-group">
 					<label>Enter Product Link</label>
 					<sp:input path="link" placeholder="Enter Link" class="form-control" />
+				<sp:errors path="link" class="text-danger"/>
+				</div>
+				<div class="form-group">
+					<label>Enter Product ImageLink</label>
+					<sp:input path="imglink" placeholder="Enter Product Image Link" class="form-control" />
+				<sp:errors path="imglink" class="text-danger"/>
 				</div>
 				<div class="form-group">
 					<label>Enter Product Description</label>
 					<sp:textarea path="prodDesc"
 						placeholder="Enter Product Description" class="form-control" />
+						<sp:errors path="prodDesc" class="text-danger"/>
 				</div>
 				<div class="form-group">
 					<input type="submit" value="Add Book"
@@ -49,7 +58,6 @@
 	<div class="container">
 		<sp:form action="${pageContext.request.contextPath}/book/update" modelAttribute="b" method="post">
 			<div class="form-group">
-		 
 				<sp:hidden path="prodId" placeholder="Enter Prodcut Id" class="form-control"/>
 							</div>
 							<div class="form-group">
@@ -59,6 +67,11 @@
 			<div class="form-group">
 					<label>Enter Product Link</label>
 					<sp:input path="link" placeholder="Enter Link" class="form-control" />
+				</div>
+				<div class="form-group">
+					<label>Enter Product ImageLink</label>
+					<sp:input path="imglink" placeholder="Enter Product Image Link" class="form-control" />
+				<sp:errors path="imglink" class="text-danger"/>
 				</div>
 			<div class="form-group">
 				<label>Enter Product Desription</label> 
@@ -75,7 +88,8 @@
 					value="Reset" class="btn btn-danger btn-block" />
 			</div>
 			</sp:form>
+			</div>
 			</c:if>
-	</div>
+	
 </body>
 </html>

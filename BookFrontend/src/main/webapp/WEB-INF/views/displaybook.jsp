@@ -5,14 +5,14 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title>${book.prodName}</title>
 </head>
 <body>
 <jsp:include page="header.jsp"></jsp:include>
 <div class="container">
 <div class="row">
 		<div class="col-lg-6">
-		<img src="https://images-na.ssl-images-amazon.com/images/I/51McwnDOdWL._SX350_BO1,204,203,200_.jpg" >
+		<img src="${book.imglink}" >
 	</div>
 	<div class="col-lg-6">
 		<h2>${book.prodName}</h2>

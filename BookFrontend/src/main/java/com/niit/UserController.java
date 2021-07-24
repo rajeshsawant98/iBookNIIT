@@ -1,8 +1,11 @@
 package com.niit;
 
+import javax.validation.Valid;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 
@@ -30,9 +33,15 @@ public class UserController {
 	}
 	
 	@RequestMapping("/add")
-	public String add(@ModelAttribute("user") User u) 
+	public String add(@Valid @ModelAttribute("user") User u,BindingResult result) 
 	{
+		if(!result.hasErrors())
+		{
 		userDAO.addUser(u);
-		return "redirect:/login";
+		return "redirect:/user/login";
+		}
+		else {
+			return "register";
+		}
 	}
 }
