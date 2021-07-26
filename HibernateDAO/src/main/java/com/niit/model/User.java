@@ -23,7 +23,7 @@ public class User {
 	@NotEmpty(message = "Email is required")
 	private String email;
 	
-	@Pattern(regexp = "(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[@#$%&_]).{6,10}", message = "password is weak")
+	//@Pattern(regexp = "(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[@#$%&_]).{6,10}", message = "password is weak")
 	private String password;
 
 	public User() {
@@ -38,8 +38,32 @@ public User(String username, String email, String password) {
 	this.password = password;
 }
 
+@Column
+private boolean enabled;
+private String authority;
 
 
+
+public boolean isEnabled() {
+	return enabled;
+}
+
+
+
+
+public String getAuthority() {
+	return authority;
+}
+
+
+public void setAuthority(String authority) {
+	this.authority = authority;
+}
+
+
+public void setEnabled(boolean enabled) {
+	this.enabled = enabled;
+}
 
 
 public int getUserid() {

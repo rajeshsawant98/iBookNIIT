@@ -3,6 +3,8 @@ package com.niit;
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.bcrypt.BCrypt;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.validation.BindingResult;
@@ -37,6 +39,9 @@ public class UserController {
 	{
 		if(!result.hasErrors())
 		{
+		u.setEnabled(true);
+		u.setAuthority("user");
+		u.setPassword(new BCryptPasswordEncoder().encode(u.getPassword()));
 		userDAO.addUser(u);
 		return "redirect:/user/login";
 		}

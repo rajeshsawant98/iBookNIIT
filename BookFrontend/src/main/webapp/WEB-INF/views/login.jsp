@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+    <%@page isELIgnored="false"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -9,6 +10,7 @@
 <body>
 <jsp:include page="header.jsp"></jsp:include>
 <div class="container">
+<form action="${pageContext.request.contextPath}/loginaction" method="post">
 <div class="form-group">
 <label>Enter name</label>
 <input type="text" name="username" placeholder="Enter name" class="form-control">
@@ -21,6 +23,7 @@
 <input type="submit" value="Login" class="btn btn-primary btn-block">
 <input type="reset" value="Reset" class="btn btn-danger btn-block">
 </div>
+</form>
 </div>
 
 </body>

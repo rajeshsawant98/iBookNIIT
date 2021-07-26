@@ -70,6 +70,13 @@ public class UserDAOImpl implements UserDAO {
 		Query query=session.createQuery("from com.niit.model.User where userid= :id");
 		return (User)query.setParameter("uid", userid).getResultList().get(0);
 	}
+    
+	@Override
+	public User displayUserByName(String username) {
+		Session session= sessionFactory.getCurrentSession();
+		Query query=session.createQuery("from com.niit.model.User where username= :uname");
+		return (User)query.setParameter("uname", username).getResultList().get(0);
+	}
 
 
 }
