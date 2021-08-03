@@ -33,7 +33,7 @@
 				<sp:errors path="link" class="text-danger"/>
 				</div>
 				<div class="form-group">
-					<label>Enter Product ImageLink</label>
+					<label>Enter Product Image Link</label>
 					<sp:input path="imglink" placeholder="Enter Product Image Link" class="form-control" />
 				<sp:errors path="imglink" class="text-danger"/>
 				</div>
@@ -69,7 +69,7 @@
 					<sp:input path="link" placeholder="Enter Link" class="form-control" />
 				</div>
 				<div class="form-group">
-					<label>Enter Product ImageLink</label>
+					<label>Enter Product Image Link</label>
 					<sp:input path="imglink" placeholder="Enter Product Image Link" class="form-control" />
 				<sp:errors path="imglink" class="text-danger"/>
 				</div>
